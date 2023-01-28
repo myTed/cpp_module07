@@ -16,7 +16,7 @@ void	func(T& rf)
 }
 
 template <typename T>
-void	iter(T* const startAddr, int length, void (*f)(const T& rT))
+void	iter(const T* const startAddr, int length, void (*f)(const T& rT))
 {
 	if (startAddr == 0)
 		return ;
@@ -36,5 +36,6 @@ void	iter(T* const startAddr, int length, void (*f)(T& rT))
 		f(startAddr[idx]);
 	}
 }
+
 #endif
 

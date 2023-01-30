@@ -9,9 +9,8 @@ void	swap(T& a, T& b)
 	a = b;
 	b = tmp;
 }
-
 template<typename T>
-const T&	min(const T& a, const T& b)
+const T&	min(T& a, T& b)
 {
 	if (a < b)
 		return (a);

@@ -1,20 +1,10 @@
-#ifndef _ITER_HPP
-#define _ITER_HPP
+cpp07 설명
+=========
 
-#include <iostream>
+ex01 C++ overload resolution
+----------------------------
 
-template <typename T>
-void	func(const T& rf)
-{
-	std::cout << rf << std::endl;
-}
-
-template <typename T>
-void	func(T& rf)
-{
-	std::cout << rf << std::endl;
-}
-
+```c++
 template <typename T>
 void	iter(T* const startAddr, int length, void (*f)(T& rT))
 {
@@ -25,7 +15,7 @@ void	iter(T* const startAddr, int length, void (*f)(T& rT))
 		f(startAddr[idx]);
 	}
 }
-/*
+
 template <typename T>
 void	iter(const T* const startAddr, int length, void (*f)(const T& rT))
 {
@@ -36,6 +26,11 @@ void	iter(const T* const startAddr, int length, void (*f)(const T& rT))
 		f(startAddr[idx]);
 	}
 }
-*/
-#endif
+```
+
+
+link : [Notion] [Notionlink]
+
+[Notionlink]: https://www.notion.so/C-overload-resolution-b2c984a7c374456f9eeae7fb83dba9d5
+
 

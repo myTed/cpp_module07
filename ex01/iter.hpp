@@ -18,7 +18,7 @@ void	func(T& rf)
 template <typename T>
 void	iter(T* const startAddr, int length, void (*f)(T& rT))
 {
-	if (startAddr == 0)
+	if ((startAddr == 0) || (f == 0))
 		return ;
 	for (int idx = 0; idx < length; idx++)
 	{
@@ -29,7 +29,7 @@ void	iter(T* const startAddr, int length, void (*f)(T& rT))
 template <typename T>
 void	iter(const T* const startAddr, int length, void (*f)(const T& rT))
 {
-	if (startAddr == 0)
+	if ((startAddr == 0) || (f == 0))
 		return ;
 	for (int idx = 0; idx < length; idx++)
 	{

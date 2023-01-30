@@ -25,7 +25,7 @@ void	iter(T* const startAddr, int length, void (*f)(T& rT))
 		f(startAddr[idx]);
 	}
 }
-/*
+
 template <typename T>
 void	iter(const T* const startAddr, int length, void (*f)(const T& rT))
 {
@@ -36,6 +36,6 @@ void	iter(const T* const startAddr, int length, void (*f)(const T& rT))
 		f(startAddr[idx]);
 	}
 }
-*/
+
 #endif
 

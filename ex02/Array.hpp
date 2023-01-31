@@ -35,6 +35,8 @@ Array<T>::Array(unsigned int n)
 : _ptr(0), _size(0)
 {
 	std::cout << "Array NonDefalut Constructor Called\n";
+	if (n == 0)
+		return ;
 	try
 	{
 		_ptr = new T[n]();
